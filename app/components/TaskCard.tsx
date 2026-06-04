@@ -55,14 +55,14 @@ export function TaskCard({ taskId }: TaskCardProps) {
         borderColor: "var(--color-border)",
       }}
     >
-      {/* Priority badge */}
+
       <span
         className={`absolute right-3 top-3 rounded-full px-2 py-0.5 text-xs font-semibold ${badge.className}`}
       >
         {badge.label}
       </span>
 
-      {/* Title — max 2 lines */}
+
       <h3
         className="line-clamp-2 pr-14 text-sm font-bold leading-snug"
         style={{ color: "var(--color-text-primary)" }}
@@ -70,7 +70,7 @@ export function TaskCard({ taskId }: TaskCardProps) {
         {title}
       </h3>
 
-      {/* Description — max 3 lines */}
+
       <p
         className="line-clamp-3 text-xs leading-relaxed"
         style={{ color: "var(--color-text-secondary)" }}
@@ -78,7 +78,7 @@ export function TaskCard({ taskId }: TaskCardProps) {
         {description}
       </p>
 
-      {/* Tags */}
+
       {tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
@@ -97,9 +97,7 @@ export function TaskCard({ taskId }: TaskCardProps) {
         </div>
       )}
 
-      {/* Footer row */}
       <div className="flex items-center justify-between pt-1">
-        {/* Due date */}
         {dueDate !== null ? (
           <span
             className="flex items-center gap-1 text-xs"
@@ -128,7 +126,7 @@ export function TaskCard({ taskId }: TaskCardProps) {
           <span />
         )}
 
-        {/* Actions */}
+
         <div className="flex items-center gap-1">
           <button
             type="button"
