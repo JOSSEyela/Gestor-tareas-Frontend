@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Priority, Status, Task, TaskFilters } from "../types";
 import { defaultFilters, getUniqueTags } from "../utils/filterTasks";
 
@@ -48,7 +48,7 @@ export function FilterBar({ filters, onChange, tasks }: FilterBarProps) {
     return () => clearTimeout(timer);
   }, [searchLocal, onChange]);
 
-  const uniqueTags = getUniqueTags(tasks);
+  const uniqueTags = useMemo(() => getUniqueTags(tasks), [tasks]);
 
   const isFiltered =
     searchLocal !== "" ||
