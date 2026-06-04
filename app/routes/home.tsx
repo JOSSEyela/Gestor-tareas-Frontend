@@ -1,11 +1,7 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
-export const meta = (_args: Route.MetaArgs) => [
-  { title: "New React Router App" },
-  { name: "description", content: "Welcome to React Router!" },
-]
+export const meta = (_args: Route.MetaArgs) => [{ title: "Task Manager" }]
 
 export default function Home() {
-  return <Welcome />;
+  return <h1>Dashboard</h1>
 }
